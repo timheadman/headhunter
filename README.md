@@ -7,8 +7,11 @@
 * Clean architecture
 * Repository Pattern
 * Storage Pattern
-* Singleton
-* DI Dagger2
+* Observer Pattern
+* Singleton Pattern
+* Fabric Pattern
+* Dependency Injections (Dagger2)
+* Kotlin
 * Android Studio
 * Navigation Fragments
 * KOTR Server
