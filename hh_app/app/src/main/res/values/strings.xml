@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HeadHunter</string>
+    <string name="title_companies">Companies</string>
+    <string name="title_vacancies">Vacancies</string>
+    <string name="title_candidate">Candidate</string>
+    <string name="edit_candidate">Candidate</string>
+    <string name="education">EDUCATION</string>
+    <string name="jobs">JOBS</string>
+    <string name="your_full_name">Your full name</string>
+    <string name="your_profession">Your profession</string>
+    <string name="name">Name</string>
+    <string name="profession">Profession</string>
+    <string name="date">Date</string>
+    <string name="gender">Gender:</string>
+    <string name="phone">Phone</string>
+    <string name="email">E-mail</string>
+    <string name="description">Description</string>
+
+</resources>

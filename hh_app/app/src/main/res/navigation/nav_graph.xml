@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/companiesFragment">
+
+    <fragment
+        android:id="@+id/companyDetailsFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.company.CompanyDetailsFragment"
+        android:label="Company details"
+        tools:layout="@layout/fragment_company_details">
+        <argument
+            android:name="companyId"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_companyDetailsFragment_to_companiesFragment"
+            app:destination="@id/companiesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/companiesFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.company.CompaniesFragment"
+        android:label="Companies"
+        tools:layout="@layout/fragment_companies">
+        <action
+            android:id="@+id/action_companiesFragment_to_companyDetailsFragment"
+            app:destination="@id/companyDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vacanciesFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.vacancy.VacanciesFragment"
+        android:label="Vacancies"
+        tools:layout="@layout/fragment_vacancies">
+        <action
+            android:id="@+id/action_vacanciesFragment_to_vacancyDetailsFragment"
+            app:destination="@id/vacancyDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vacancyDetailsFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.vacancy.VacancyDetailsFragment"
+        android:label="Vacancy details"
+        tools:layout="@layout/fragment_vacancy_details">
+        <argument
+            android:name="vacancyId"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_vacancyDetailsFragment_to_vacanciesFragment"
+            app:destination="@id/vacanciesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/candidateFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.candidate.CandidateFragment"
+        android:label="Candidate"
+        tools:layout="@layout/fragment_candidate" >
+        <action
+            android:id="@+id/action_candidateFragment_to_companiesFragment"
+            app:destination="@id/companiesFragment" />
+        <action
+            android:id="@+id/action_candidateFragment_to_candidateEditFragment"
+            app:destination="@id/candidateEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/candidateEditFragment"
+        android:name="ru.megaland.headhunter.presentation.ui.candidate.CandidateEditFragment"
+        android:label="Edit profile" >
+        <action
+            android:id="@+id/action_candidateEditFragment_to_candidateFragment"
+            app:destination="@id/candidateFragment" />
+    </fragment>
+
+</navigation>

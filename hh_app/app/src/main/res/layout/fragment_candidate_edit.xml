@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="50dp"
+    android:paddingTop="20dp"
+    android:paddingRight="50dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".presentation.ui.candidate.CandidateEditFragment">
+
+        <TextView
+            android:id="@+id/candidateLabelFullName"
+            style="@style/AppLabels"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/candidateEditFullName"
+            style="@style/AppEditText"
+            android:autofillHints="givenName, familyName"
+            android:inputType="text"
+            android:labelFor="@id/candidateLabelFullName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelFullName"
+            tools:text="John Doe" />
+
+        <TextView
+            android:id="@+id/candidateLabelProfession"
+            style="@style/AppLabels"
+            android:text="@string/profession"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditFullName" />
+
+        <EditText
+            android:id="@+id/candidateEditProfession"
+            style="@style/AppEditText"
+            android:autofillHints="profession"
+            android:hint="@string/your_profession"
+            android:inputType="text"
+            android:labelFor="@id/candidateLabelProfession"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelProfession"
+            tools:text="Manager" />
+
+        <TextView
+            android:id="@+id/candidateLabelDate"
+            style="@style/AppLabels"
+            android:autofillHints=""
+            android:text="@string/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditProfession" />
+
+        <EditText
+            android:id="@+id/candidateEditBirthday"
+            style="@style/AppEditText"
+            android:autofillHints=""
+            android:inputType="date"
+            android:labelFor="@id/candidateLabelDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelDate"
+            tools:text="01.01.1950" />
+
+        <TextView
+            android:id="@+id/candidateLabelGender"
+            style="@style/AppLabels"
+            android:text="@string/gender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditBirthday" />
+
+        <EditText
+            android:id="@+id/candidateEditGender"
+            style="@style/AppEditText"
+            android:autofillHints=""
+            android:inputType="text"
+            android:labelFor="@id/candidateLabelGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelGender"
+            tools:text="Male" />
+
+        <TextView
+            android:id="@+id/candidateLabelPhone"
+            style="@style/AppLabels"
+            android:text="@string/phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditGender" />
+
+        <EditText
+            android:id="@+id/candidateEditPhone"
+            style="@style/AppEditText"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:labelFor="@id/candidateLabelPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelPhone"
+            tools:text="+78008008080" />
+
+        <TextView
+            android:id="@+id/candidateLabelEmail"
+            style="@style/AppLabels"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditPhone" />
+
+        <EditText
+            android:id="@+id/candidateEditEmail"
+            style="@style/AppEditText"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:labelFor="@id/candidateLabelEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelEmail"
+            tools:text="example@edu.com" />
+
+        <TextView
+            android:id="@+id/candidateLabelDescription"
+            style="@style/AppLabels"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateEditEmail" />
+
+        <EditText
+            android:id="@+id/candidateEditDescription"
+            style="@style/AppEditText"
+            android:autofillHints=""
+            android:inputType="textMultiLine"
+            android:labelFor="@id/candidateLabelDescription"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidateLabelDescription"
+            tools:text="С самого детства я увлекался технологиями, и мой путь в мир разработки начался с простых экспериментов в создании своих игр. С годами мой интерес к программированию углублялся, и я решил посвятить свою карьеру созданию инновационных программных продуктов." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

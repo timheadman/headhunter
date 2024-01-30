@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/companiesFragment"
+        android:icon="@drawable/ic_company_24"
+        android:title="@string/title_companies" />
+
+    <item
+        android:id="@+id/vacanciesFragment"
+        android:icon="@drawable/ic_vacancies_24"
+        android:title="@string/title_vacancies" />
+
+    <item
+        android:id="@+id/candidateFragment"
+        android:icon="@drawable/ic_candidate_24"
+        android:title="@string/title_candidate" />
+
+</menu>
