@@ -2,7 +2,7 @@ package ru.megaland.headhunter.data.repository
 
 import ru.megaland.headhunter.data.model.company.CompanyData
 import ru.megaland.headhunter.data.model.company.CompanyShortData
-import ru.megaland.headhunter.data.storage.CompanyStorageApiImpl
+import ru.megaland.headhunter.data.storage.company.CompanyStorageApiImpl
 import ru.megaland.headhunter.domain.model.company.Company
 import ru.megaland.headhunter.domain.model.company.CompanyShort
 import ru.megaland.headhunter.domain.repository.CompanyRepository

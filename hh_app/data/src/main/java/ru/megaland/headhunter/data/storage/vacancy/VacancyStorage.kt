@@ -1,4 +1,4 @@
-package ru.megaland.headhunter.data.storage
+package ru.megaland.headhunter.data.storage.vacancy
 
 import ru.megaland.headhunter.data.model.company.VacancyData
 import ru.megaland.headhunter.data.model.company.VacancyShortData

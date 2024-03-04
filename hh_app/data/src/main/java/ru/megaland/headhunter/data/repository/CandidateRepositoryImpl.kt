@@ -5,7 +5,7 @@ import ru.megaland.headhunter.data.model.candidate.CandidateInfoData
 import ru.megaland.headhunter.data.model.candidate.ContactsData
 import ru.megaland.headhunter.data.model.candidate.EducationData
 import ru.megaland.headhunter.data.model.candidate.JobExperienceData
-import ru.megaland.headhunter.data.storage.CandidateStorageApiImpl
+import ru.megaland.headhunter.data.storage.candidate.CandidateStorageApiImpl
 import ru.megaland.headhunter.domain.model.candidate.Candidate
 import ru.megaland.headhunter.domain.model.candidate.CandidateInfo
 import ru.megaland.headhunter.domain.model.candidate.Contacts

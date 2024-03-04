@@ -1,4 +1,4 @@
-package ru.megaland.headhunter.data.storage
+package ru.megaland.headhunter.data.storage.company
 
 import retrofit2.http.GET
 import retrofit2.http.Path

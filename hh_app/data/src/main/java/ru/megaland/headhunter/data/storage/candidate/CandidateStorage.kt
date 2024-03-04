@@ -1,4 +1,4 @@
-package ru.megaland.headhunter.data.storage
+package ru.megaland.headhunter.data.storage.candidate
 
 import ru.megaland.headhunter.data.model.candidate.CandidateData
 

@@ -1,13 +1,13 @@
-package ru.megaland.headhunter.data.storage
+package ru.megaland.headhunter.data.storage.company
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object CandidateRetrofitBuilder {
+object CompanyRetrofitBuilder {
 
-    val apiService: CandidateStorageApi = getInstance().create(CandidateStorageApi::class.java)
+    val apiService: CompanyStorageApi = getInstance().create(CompanyStorageApi::class.java)
     private const val baseUrl = "http://10.11.12.1:8080/"
 
     private fun provideOkhttp(): OkHttpClient {

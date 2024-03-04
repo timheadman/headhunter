@@ -2,7 +2,7 @@ package ru.megaland.headhunter.data.repository
 
 import ru.megaland.headhunter.data.model.company.VacancyData
 import ru.megaland.headhunter.data.model.company.VacancyShortData
-import ru.megaland.headhunter.data.storage.VacancyStorage
+import ru.megaland.headhunter.data.storage.vacancy.VacancyStorage
 import ru.megaland.headhunter.domain.model.company.Vacancy
 import ru.megaland.headhunter.domain.model.company.VacancyShort
 import ru.megaland.headhunter.domain.repository.VacancyRepository
