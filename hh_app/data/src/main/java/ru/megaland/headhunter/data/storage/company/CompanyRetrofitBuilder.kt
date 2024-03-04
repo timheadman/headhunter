@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object CompanyRetrofitBuilder {
 
     val apiService: CompanyStorageApi = getInstance().create(CompanyStorageApi::class.java)
-    private const val baseUrl = "http://10.11.12.1:8080/"
+    private const val BASEURL = "http://10.11.12.1:8080/"
 
     private fun provideOkhttp(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
@@ -20,7 +20,7 @@ object CompanyRetrofitBuilder {
 
     private fun getInstance(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(baseUrl)
+            .baseUrl(BASEURL)
             .client(provideOkhttp())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

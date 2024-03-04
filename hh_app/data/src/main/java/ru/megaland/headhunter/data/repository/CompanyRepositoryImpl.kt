@@ -2,12 +2,12 @@ package ru.megaland.headhunter.data.repository
 
 import ru.megaland.headhunter.data.model.company.CompanyData
 import ru.megaland.headhunter.data.model.company.CompanyShortData
-import ru.megaland.headhunter.data.storage.company.CompanyStorageApiImpl
+import ru.megaland.headhunter.data.storage.company.CompanyStorage
 import ru.megaland.headhunter.domain.model.company.Company
 import ru.megaland.headhunter.domain.model.company.CompanyShort
 import ru.megaland.headhunter.domain.repository.CompanyRepository
 
-class CompanyRepositoryImpl(private val companyStorage: CompanyStorageApiImpl) : CompanyRepository {
+class CompanyRepositoryImpl(private val companyStorage: CompanyStorage) : CompanyRepository {
     override suspend fun getAllCompanies(): List<CompanyShort> {
         return companyStorage.getAllCompanies().map {
             it.toCompanyShort()
