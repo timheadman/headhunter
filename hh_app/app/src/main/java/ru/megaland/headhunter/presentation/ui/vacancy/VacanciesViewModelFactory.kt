@@ -11,7 +11,7 @@ class VacanciesViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return VacanciesViewModel(
             getAllVacanciesUseCase = getAllVacanciesUseCase,
-        ) as T
+        ) as T // TODO: Unchecked cast
     }
 
 }

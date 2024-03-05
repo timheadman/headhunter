@@ -6,6 +6,7 @@ import ru.megaland.headhunter.data.repository.CandidateRepositoryImpl
 import ru.megaland.headhunter.data.repository.CompanyRepositoryImpl
 import ru.megaland.headhunter.data.repository.VacancyRepositoryImpl
 import ru.megaland.headhunter.data.storage.candidate.CandidateRetrofitBuilder
+import ru.megaland.headhunter.data.storage.candidate.CandidateStorage
 import ru.megaland.headhunter.data.storage.candidate.CandidateStorageApiImpl
 import ru.megaland.headhunter.data.storage.company.CompanyRetrofitBuilder
 import ru.megaland.headhunter.data.storage.company.CompanyStorage
@@ -26,8 +27,8 @@ class DataModule {
     }
 
     @Provides
-    fun provideCompanyRepository(): CompanyRepository {
-        return CompanyRepositoryImpl(companyStorage = CompanyStorageApiImpl(CompanyRetrofitBuilder.apiService))
+    fun provideCompanyRepository(companyStorage: CompanyStorage): CompanyRepository {
+        return CompanyRepositoryImpl(companyStorage = companyStorage)
     }
 
     @Provides
@@ -36,15 +37,18 @@ class DataModule {
     }
 
     @Provides
-    fun provideVacancyRepository(): VacancyRepository {
-        return VacancyRepositoryImpl(vacancyStorage = VacancyStorageApiImpl(VacancyRetrofitBuilder.apiService))
+    fun provideVacancyRepository(vacancyStorage: VacancyStorage): VacancyRepository {
+        return VacancyRepositoryImpl(vacancyStorage = vacancyStorage)
     }
 
     @Provides
-    fun provideCandidateRepository(): CandidateRepository {
-        return CandidateRepositoryImpl(candidateStorage = CandidateStorageApiImpl(
-            CandidateRetrofitBuilder.apiService)
-        )
+    fun provideCandidateStorage(): CandidateStorage {
+        return CandidateStorageApiImpl(retrofitApi = CandidateRetrofitBuilder.apiService)
+    }
+
+    @Provides
+    fun provideCandidateRepository(candidateStorage: CandidateStorage): CandidateRepository {
+        return CandidateRepositoryImpl(candidateStorage = candidateStorage)
     }
 
 }

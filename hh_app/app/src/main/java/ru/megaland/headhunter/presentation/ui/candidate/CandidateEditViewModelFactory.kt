@@ -11,7 +11,7 @@ class CandidateEditViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return CandidateEditViewModel(
             getCandidateByIdUseCase = getCandidateByIdUseCase,
-        ) as T
+        ) as T // TODO: Unchecked cast
     }
 
 }

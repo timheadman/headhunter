@@ -11,7 +11,7 @@ class CompanyDetailsViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return CompanyDetailsViewModel(
             getCompanyByIdUseCase = getCompanyByIdUseCase,
-        ) as T
+        ) as T // TODO: Unchecked cast
     }
 
 }

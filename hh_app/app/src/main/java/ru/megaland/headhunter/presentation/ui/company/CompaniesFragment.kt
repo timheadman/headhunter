@@ -16,11 +16,10 @@ import javax.inject.Inject
 
 class CompaniesFragment : Fragment() {
 
-    private lateinit var binding: FragmentCompaniesBinding
-
     @Inject
     lateinit var companiesViewModelFactory: CompaniesViewModelFactory
     private val viewModel: CompaniesViewModel by viewModels(factoryProducer = { companiesViewModelFactory })
+    private lateinit var binding: FragmentCompaniesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,

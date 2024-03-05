@@ -19,56 +19,44 @@ class AppModule {
 
     @Provides
     fun provideCompaniesViewModelFactory(
-        getAllCompaniesUseCase: GetAllCompaniesUseCase,
+        getAllCompaniesUseCase: GetAllCompaniesUseCase
     ): CompaniesViewModelFactory {
-        return CompaniesViewModelFactory(
-            getAllCompaniesUseCase = getAllCompaniesUseCase,
-        )
+        return CompaniesViewModelFactory(getAllCompaniesUseCase = getAllCompaniesUseCase)
     }
 
     @Provides
     fun provideCompanyDetailsViewModelFactory(
-        getCompanyByIdUseCase: GetCompanyByIdUseCase,
+        getCompanyByIdUseCase: GetCompanyByIdUseCase
     ): CompanyDetailsViewModelFactory {
-        return CompanyDetailsViewModelFactory(
-            getCompanyByIdUseCase = getCompanyByIdUseCase,
-        )
+        return CompanyDetailsViewModelFactory(getCompanyByIdUseCase = getCompanyByIdUseCase)
     }
 
     @Provides
     fun provideVacanciesViewModelFactory(
-        getAllVacanciesUseCase: GetAllVacanciesUseCase,
+        getAllVacanciesUseCase: GetAllVacanciesUseCase
     ): VacanciesViewModelFactory {
-        return VacanciesViewModelFactory(
-            getAllVacanciesUseCase = getAllVacanciesUseCase,
-        )
+        return VacanciesViewModelFactory(getAllVacanciesUseCase = getAllVacanciesUseCase)
     }
 
     @Provides
     fun provideVacancyDetailsViewModelFactory(
-        getVacancyByIdUseCase: GetVacancyByIdUseCase,
+        getVacancyByIdUseCase: GetVacancyByIdUseCase
     ): VacancyDetailsViewModelFactory {
-        return VacancyDetailsViewModelFactory(
-            getVacancyByIdUseCase = getVacancyByIdUseCase,
-        )
+        return VacancyDetailsViewModelFactory(getVacancyByIdUseCase = getVacancyByIdUseCase)
     }
 
     @Provides
     fun provideCandidateViewModelFactory(
-        getCandidateByIdUseCase: GetCandidateByIdUseCase,
+        getCandidateByIdUseCase: GetCandidateByIdUseCase
     ): CandidateViewModelFactory {
-        return CandidateViewModelFactory(
-            getCandidateByIdUseCase = getCandidateByIdUseCase,
-        )
+        return CandidateViewModelFactory(getCandidateByIdUseCase = getCandidateByIdUseCase)
     }
 
     @Provides
     fun provideCandidateEditViewModelFactory(
-        getCandidateByIdUseCase: GetCandidateByIdUseCase,
+        getCandidateByIdUseCase: GetCandidateByIdUseCase
     ): CandidateEditViewModelFactory {
-        return CandidateEditViewModelFactory(
-            getCandidateByIdUseCase = getCandidateByIdUseCase,
-        )
+        return CandidateEditViewModelFactory(getCandidateByIdUseCase = getCandidateByIdUseCase)
     }
 
 }
